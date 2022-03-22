@@ -16,6 +16,6 @@ public class Main {
             System.out.println("He recibido "+texto);
         }while(!texto.equals(pass));
 
-        System.out.println("Contraseña correcta");
+        System.out.println("Correcta");
     }
 }
