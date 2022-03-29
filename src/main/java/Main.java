@@ -13,7 +13,6 @@ public class Main {
         InputStream inputStream = new ByteArrayInputStream(fakeInput.getBytes());
         //Scanner sc = new Scanner (System.in);
         Scanner sc = new Scanner (inputStream);
-        String texto;
 
         if (compPass(sc, pass))
             System.out.println("Has acertado la contraseña");
