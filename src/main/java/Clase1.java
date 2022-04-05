@@ -4,7 +4,7 @@ import java.io.ByteArrayInputStream;
 
 
 
-public class Main {
+public class Clase1 {
     public static void main(String[] args) {
 
         String pass = "1234";
