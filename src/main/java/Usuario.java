@@ -5,6 +5,7 @@ public class Usuario {
 
     private String nombre;
     private String pass;
+    private int intentos = 3;
 
      Usuario(String nombre, String pass) {
         this.nombre = nombre;
@@ -22,21 +23,22 @@ public class Usuario {
 
     }
     public boolean nombreCorrecto(String nomUser) {
-        return nombreCandidato.contentEquals(nombre);
+        return nomUser.contentEquals(nombre);
     }
 
-    public boolean passCorrecta(String pasCandidata) {
-        if (pasCandidata.contentEquals(pass)) {
-            intentosRestantes = 3;
+    public boolean passCorrecta(String passUser) {
+        if (passUser.contentEquals(pass)) {
+            intentos = 3;
             return true;
         } else {
-            intentosRestantes--;
+            intentos--;
             return false;
         }
     }
 
-    public boolean quedanIntentos(){
-        return intentosRestantes > 0;
+    public boolean quedanIntentos() {
+        return intentos > 0;
+    }
 
     @Override
     public String toString() {
